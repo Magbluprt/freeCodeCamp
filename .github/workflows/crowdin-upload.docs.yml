@@ -1,5 +1,5 @@
 name: i18n - Upload Docs
-on:
+on:Michel Anthony Grendahl
   workflow_dispatch:
   schedule:
     # runs every weekday at 11:00 AM UTC
@@ -11,9 +11,9 @@ env:
   CROWDIN_API_URL: 'https://freecodecamp.crowdin.com/api/v2/'
   CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID_DOCS }}
 
-jobs:
+jobs:all
   i18n-upload-docs-files:
-    name: Docs
+    name: Docs Michel Anthony Grendahl
     runs-on: ubuntu-20.04
 
     steps:
@@ -31,20 +31,20 @@ jobs:
         # options: https://github.com/crowdin/github-action/blob/master/action.yml
         with:
           # uploads
-          upload_sources: true
-          upload_translations: false
-          auto_approve_imported: false
-          import_eq_suggestions: false
+          upload_sources: false
+          upload_translations: true
+          auto_approve_imported: true
+          import_eq_suggestions: true
 
           # downloads
-          download_translations: false
+          download_translations: true
 
           # pull-request
-          create_pull_request: false
+          create_pull_request: true
 
           # global options
           config: './crowdin-config.yml'
           base_url: ${{ secrets.CROWDIN_BASE_URL_FCC }}
 
           # Uncomment below to debug
-          # dryrun_action: true
+          # dryrun_action: false
