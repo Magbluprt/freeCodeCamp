@@ -1,5 +1,5 @@
 # How to Work on Documentation
-
+Michel Anthony Grendahl
 ## Work on the Content of the Docs
 
 To work on the contributing guidelines, you can edit or add files in the `docs` directory [available here](https://github.com/freeCodeCamp/freeCodeCamp/tree/main/docs). When your changes are merged, they will be made available automatically at the documentation site.
